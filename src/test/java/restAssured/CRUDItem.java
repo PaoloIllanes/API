@@ -62,7 +62,7 @@ public class CRUDItem {
                 .statusCode(200)
                 .body("Content",equalTo("PaoloItemUpdate"))
                 .log().all();
-      /* // Delete Item
+      // Delete Item
        response=given()
                 .auth()
                 .preemptive()
@@ -75,7 +75,7 @@ public class CRUDItem {
                 .statusCode(200)
                 .body("Content",equalTo("PaoloItemUpdate"))
                 .body("Deleted",equalTo(true))
-                .log().all();*/
+                .log().all();
 
     }
 }
