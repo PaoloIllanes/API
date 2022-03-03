@@ -9,7 +9,7 @@ public class RequestPUT implements IRequest {
     public Response send(RequestInformation requestInformation) {
 
        Response response= given()
-               .auth().oauth2(RequestToken.getToken())
+               .header("Token",RequestToken.getToken())
                .body(requestInformation.getBody())
                .log().all()
                .when()

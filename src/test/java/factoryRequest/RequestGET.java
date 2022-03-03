@@ -9,7 +9,7 @@ public class RequestGET implements IRequest {
     public Response send(RequestInformation requestInformation) {
 
        Response response= given()
-               .auth().oauth2(RequestToken.getToken())
+               .header("Token",RequestToken.getToken())
                .log().all()
                .when()
                .get(requestInformation.getUrl());
